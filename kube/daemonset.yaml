@@ -16,8 +16,8 @@ spec:
         securityContext:
           privileged: true
         envFrom:
-        - configMapRef:
-            name: s3-config
+        - secretRef:
+            name: s3-credentials
         volumeMounts:
         - name: devfuse
           mountPath: /dev/fuse
